@@ -1,0 +1,164 @@
+// grid
+
+.center-wrap {
+  display: flex;
+  justify-content: center;
+  background-color: #f5f5f5;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 10px;
+  padding: 10px 10px 10px 10px;
+  width: 1400px;
+  background-color: #ffffff;
+}
+
+.product-container {
+  grid-column-end: span 2;
+  margin-bottom: 10px;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+.product-card {
+  max-height: 350px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  img {
+    width: 100%;
+    height: 150px;
+  }
+  height: 100%;
+}
+
+.product-search {
+  margin: 5px 0px 5px 0px;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 10px 10px 10px;
+  height: 100%;
+  justify-content: space-between;
+  .product-code {
+    color: #ccc8c8;
+  }
+  .product-price {
+    display: flex;
+    margin: 5px 0px 5px 0px;
+    p {
+      margin: 0px 5px 0px 5px;
+    }
+    span {
+      font-size: 18px;
+    }
+  }
+}
+
+// pagination
+.pagination-container {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  margin: 5px 0px 0px 0px;
+  z-index: 5000;
+  div {
+    align-items: center;
+    margin: 0px 5px 0px 5px;
+  }
+  .pagination-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 16px;
+  }
+}
+
+// sidebar
+.sidebar-container {
+  padding: 2px;
+}
+
+.sidebar-header {
+  display: flex;
+  flex-direction: column;
+}
+.selected-product-container {
+  margin-top: 10px;
+}
+.selected-product {
+  margin-bottom: 10px;
+  padding: 3px;
+  display: flex;
+  cursor: move;
+  img {
+    width: 70px;
+  }
+  .product-remove {
+    cursor: pointer;
+    color: red;
+    text-transform: capitalize;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+  }
+  .selected-product-body {
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+}
+
+// custom toast
+.custom-toast {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  background-color: #333;
+  color: white;
+  width: 200px;
+  height: 50px;
+  z-index: 9000;
+  justify-content: center;
+  text-transform: capitalize;
+  font-weight: bold;
+  align-items: center;
+  border-radius: 5px;
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide 0.5s forwards;
+  animation-delay: 2s;
+}
+
+@-webkit-keyframes slide {
+  100% {
+    left: 10;
+  }
+}
+
+@keyframes slide {
+  100% {
+    left: 10;
+  }
+}
+
+// disabled UI
+.product-disabled {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
+}
