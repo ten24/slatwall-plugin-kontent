@@ -15,7 +15,7 @@ const ProductGrid = ({ products, selectedProducts, setSelectedProducts, currentP
         {products.map(data => {
           return (
             <div className="dropdown-options product-card" key={data.productID}>
-              <img src={data.images.length ? `${process.env.REACT_APP_SLATWALL_IMAGE_HOST}${data.images[1]}` : ''} alt="" />
+              <img src={data?.images?.length ? `${process.env.REACT_APP_SLATWALL_IMAGE_HOST}${data.images[1]}` : ''} alt="" />
               <div className="product-details">
                 <span className="product-code">{data.productCode}</span>
                 <span className="product-brand">{data.brandName}</span>

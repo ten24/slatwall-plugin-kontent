@@ -1,4 +1,17 @@
-const { CustomElement } = window
+const { CustomElement } = process.env.REACT_APP_DEV_MODE
+  ? {
+      CustomElement: {
+        init: callback => {
+          callback(undefined, undefined)
+        },
+        getElementValue: () => {},
+        observeElementChanges: () => {},
+        observeItemChanges: () => {},
+        setValue: () => {},
+        setHeight: () => {},
+      },
+    }
+  : window
 
 class KontentPluginSDK {
   element

@@ -5,7 +5,7 @@ const CheckboxField = ({ ID, name, onSelect, filterList }) => {
   return (
     <div className="option__pane" key={ID}>
       <span onClick={onSelect}>
-        <input className="option__input--hidden" value={ID} id={ID} name={name} defaultChecked={filterList.includes(ID)} />
+        <input className="option__input--hidden" defaultValue={ID} id={ID} name={name} defaultChecked={filterList.includes(ID)} />
         <label className={selectedClass}>
           <span className="option__label">{name}</span>
         </label>
@@ -21,6 +21,7 @@ const FilterBox = ({ list = [], toSet, selectedList, heading }) => {
         list.map(el => {
           return (
             <CheckboxField
+              key={el.id}
               ID={el.id}
               name={el.name}
               onSelect={() => {
