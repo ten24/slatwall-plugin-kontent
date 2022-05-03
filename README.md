@@ -1,6 +1,7 @@
-# Ultra Commerce React Plugin
+# UltraCommerce React Plugin
 
-This plugin needs to be deployed
+UltraCommerce product selector is an advanced custom element which allows users to add one or multiple products from their product catalog to a Kontent CMS page by search, category, product type, and brand filters.
+
 
 ## For Local Development
 
